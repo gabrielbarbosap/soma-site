@@ -360,13 +360,13 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
 }
 
 /* ==========================================================================
-   Espaço reservado para foto (placeholder do cliente)
+   Fotos (banco de imagens temporário — substituir por fotos reais da SOMA)
    ========================================================================== */
 .photo-frame{
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  border: 1px dashed rgba(73,16,35,.35);
+  border: 1px solid var(--line);
   background: var(--paper-dim);
 }
 .photo-frame img{
@@ -374,7 +374,6 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: .9;
 }
 .photo-frame .photo-tag{
   position: absolute;

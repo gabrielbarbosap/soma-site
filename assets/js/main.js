@@ -9,6 +9,7 @@
 
   // ---------- Config de contato (ajustar com dados reais do cliente) ----------
   var WHATSAPP_NUMBER = '5581900000000'; // formato: 55 + DDD + número, sem símbolos
+  var WEB3FORMS_ACCESS_KEY = 'COLOQUE_SUA_CHAVE_DO_WEB3FORMS_AQUI'; // gerar grátis em https://web3forms.com
 
   // ---------- Menu mobile ----------
   var toggle = document.querySelector('.nav-toggle');
@@ -59,7 +60,7 @@
     el.rel = 'noopener';
   });
 
-  // ---------- Formulários -> monta mensagem e abre WhatsApp ----------
+  // ---------- Formulários -> abrem o WhatsApp e enviam por e-mail (Web3Forms) ----------
   document.querySelectorAll('form[data-lead-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -73,13 +74,43 @@
       });
       var text = lines.join('\n');
       var status = form.querySelector('.form-status');
+      var submitBtn = form.querySelector('button[type="submit"]');
 
+      // Abre o WhatsApp imediatamente — precisa ser síncrono para o navegador não bloquear o pop-up.
       window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
 
       if (status) {
-        status.textContent = 'Pronto! Abrimos o WhatsApp com os dados preenchidos — é só enviar a mensagem.';
+        status.textContent = 'Abrimos o WhatsApp com os dados preenchidos. Enviando também por e-mail...';
         status.classList.add('visible');
       }
+      if (submitBtn) submitBtn.disabled = true;
+
+      var emailData = new FormData(form);
+      emailData.append('access_key', WEB3FORMS_ACCESS_KEY);
+      emailData.append('subject', title);
+      emailData.append('from_name', 'Site SOMA Administradora');
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: emailData
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (result) {
+          if (!status) return;
+          status.textContent = result.success
+            ? 'Recebemos sua mensagem por e-mail e abrimos o WhatsApp — pode enviar por lá também.'
+            : 'Abrimos o WhatsApp com os dados. O envio por e-mail falhou, mas pode continuar por lá.';
+        })
+        .catch(function () {
+          if (status) {
+            status.textContent = 'Abrimos o WhatsApp com os dados preenchidos — é só enviar a mensagem por lá.';
+          }
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+
       form.reset();
     });
   });

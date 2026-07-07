@@ -9,7 +9,6 @@
 
   // ---------- Config de contato (ajustar com dados reais do cliente) ----------
   var WHATSAPP_NUMBER = '5581900000000'; // formato: 55 + DDD + número, sem símbolos
-  var WEB3FORMS_ACCESS_KEY = 'aa16608f-96eb-41a2-ab43-a096d4187e44'; // gerado em https://web3forms.com
 
   // ---------- Menu mobile ----------
   var toggle = document.querySelector('.nav-toggle');
@@ -60,17 +59,19 @@
     el.rel = 'noopener';
   });
 
-  // ---------- Formulários -> abrem o WhatsApp e enviam por e-mail (Web3Forms) ----------
+  // ---------- Formulários -> abrem o WhatsApp e enviam por e-mail (/api/contact + Resend) ----------
   document.querySelectorAll('form[data-lead-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var data = new FormData(form);
       var lines = [];
       var title = form.getAttribute('data-lead-title') || 'Nova solicitação pelo site';
+      var payload = { title: title };
       lines.push('*' + title + '*');
       data.forEach(function (value, key) {
         if (!value) return;
         lines.push(key + ': ' + value);
+        payload[key] = value;
       });
       var text = lines.join('\n');
       var status = form.querySelector('.form-status');
@@ -85,15 +86,10 @@
       }
       if (submitBtn) submitBtn.disabled = true;
 
-      var emailData = new FormData(form);
-      emailData.append('access_key', WEB3FORMS_ACCESS_KEY);
-      emailData.append('subject', title);
-      emailData.append('from_name', 'Site SOMA Administradora');
-
-      fetch('https://api.web3forms.com/submit', {
+      fetch('/api/contact', {
         method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: emailData
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       })
         .then(function (r) { return r.json(); })
         .then(function (result) {

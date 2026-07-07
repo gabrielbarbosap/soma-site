@@ -407,8 +407,9 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
 .hero::before{
   content: '';
   position: absolute;
-  top: -10%; right: -8%;
-  width: 620px; height: 620px;
+  top: -20%; left: 50%;
+  transform: translateX(-50%);
+  width: 760px; height: 620px;
   background: radial-gradient(circle, var(--rose-light) 0%, transparent 68%);
   opacity: .8;
   z-index: 0;
@@ -417,18 +418,18 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
 .hero .container{
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: center;
 }
-@media (min-width: 860px){
-  .hero .container{ grid-template-columns: 1.15fr .85fr; }
+.hero-kicker{
+  position: relative;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
 }
-.hero-kicker{ position: relative; }
+.hero .eyebrow{ justify-content: center; }
 .hero h1{
   font-size: clamp(2.1rem, 8vw, 4.1rem);
-  max-width: 14ch;
+  margin-inline: auto;
+  max-width: 16ch;
 }
 .hero h1 em{
   font-style: italic;
@@ -438,12 +439,14 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
 .hero .lede{
   font-size: 1rem;
   max-width: 46ch;
+  margin-inline: auto;
   color: var(--ink-soft);
   margin-top: 1.2rem;
 }
 .hero-actions{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: .9rem;
   margin-top: 2rem;
 }
@@ -454,6 +457,7 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
   margin-top: 2.5rem;
   padding-top: 1.6rem;
   border-top: 1px solid var(--line);
+  text-align: center;
 }
 .hero-stats div strong{
   display: block;
@@ -468,7 +472,7 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
   color: var(--ink-soft);
 }
 @media (min-width: 480px){
-  .hero-actions{ flex-direction: row; flex-wrap: wrap; }
+  .hero-actions{ flex-direction: row; flex-wrap: wrap; justify-content: center; }
 }
 @media (min-width: 860px){
   .hero .lede{ font-size: 1.05rem; }
@@ -477,39 +481,6 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
   .hero-stats div span{ font-size: .72rem; letter-spacing: .06em; }
 }
 
-.hero-emblem{
-  position: relative;
-  aspect-ratio: 4/5;
-  max-width: 320px;
-  margin-inline: auto;
-  border-radius: var(--radius);
-  background: linear-gradient(155deg, var(--navy) 0%, var(--navy-deep) 60%, var(--wine) 130%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-@media (min-width: 860px){
-  .hero-emblem{ max-width: none; }
-}
-.hero-emblem::before{
-  content: '';
-  position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(115deg, rgba(241,210,205,.05) 0 1px, transparent 1px 22px);
-}
-.hero-emblem img{
-  width: 58%;
-  filter: drop-shadow(0 18px 40px rgba(0,0,0,.35));
-  position: relative;
-  z-index: 1;
-}
-.hero-emblem .frame-corner{
-  position: absolute;
-  width: 28px; height: 28px;
-  border: 1px solid var(--line-on-dark);
-}
-.frame-corner.tl{ top: 16px; left: 16px; border-right: none; border-bottom: none; }
-.frame-corner.br{ bottom: 16px; right: 16px; border-left: none; border-top: none; }
 
 /* ==========================================================================
    Section scaffolding

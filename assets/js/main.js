@@ -9,7 +9,7 @@
 
   // ---------- Config de contato (ajustar com dados reais do cliente) ----------
   var WHATSAPP_NUMBER = '5581900000000'; // formato: 55 + DDD + número, sem símbolos
-  var WEB3FORMS_ACCESS_KEY = 'COLOQUE_SUA_CHAVE_DO_WEB3FORMS_AQUI'; // gerar grátis em https://web3forms.com
+  var WEB3FORMS_ACCESS_KEY = 'aa16608f-96eb-41a2-ab43-a096d4187e44'; // gerado em https://web3forms.com
 
   // ---------- Menu mobile ----------
   var toggle = document.querySelector('.nav-toggle');

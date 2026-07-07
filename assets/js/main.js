@@ -8,7 +8,7 @@
   }
 
   // ---------- Config de contato (ajustar com dados reais do cliente) ----------
-  var WHATSAPP_NUMBER = '5581900000000'; // formato: 55 + DDD + número, sem símbolos
+  var WHATSAPP_NUMBER = '5581987123221'; // formato: 55 + DDD + número, sem símbolos
 
   // ---------- Menu mobile ----------
   var toggle = document.querySelector('.nav-toggle');
@@ -59,29 +59,22 @@
     el.rel = 'noopener';
   });
 
-  // ---------- Formulários -> abrem o WhatsApp e enviam por e-mail (/api/contact + Resend) ----------
+  // ---------- Formulários -> enviam por e-mail (/api/contact + Resend) ----------
   document.querySelectorAll('form[data-lead-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var data = new FormData(form);
-      var lines = [];
       var title = form.getAttribute('data-lead-title') || 'Nova solicitação pelo site';
       var payload = { title: title };
-      lines.push('*' + title + '*');
       data.forEach(function (value, key) {
         if (!value) return;
-        lines.push(key + ': ' + value);
         payload[key] = value;
       });
-      var text = lines.join('\n');
       var status = form.querySelector('.form-status');
       var submitBtn = form.querySelector('button[type="submit"]');
 
-      // Abre o WhatsApp imediatamente — precisa ser síncrono para o navegador não bloquear o pop-up.
-      window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
-
       if (status) {
-        status.textContent = 'Abrimos o WhatsApp com os dados preenchidos. Enviando também por e-mail...';
+        status.textContent = 'Enviando sua mensagem...';
         status.classList.add('visible');
       }
       if (submitBtn) submitBtn.disabled = true;
@@ -95,19 +88,18 @@
         .then(function (result) {
           if (!status) return;
           status.textContent = result.success
-            ? 'Recebemos sua mensagem por e-mail e abrimos o WhatsApp — pode enviar por lá também.'
-            : 'Abrimos o WhatsApp com os dados. O envio por e-mail falhou, mas pode continuar por lá.';
+            ? 'Mensagem enviada com sucesso! Em breve entraremos em contato.'
+            : 'Não conseguimos enviar sua mensagem agora. Tente novamente ou fale com a gente pelo WhatsApp.';
+          if (result.success) form.reset();
         })
         .catch(function () {
           if (status) {
-            status.textContent = 'Abrimos o WhatsApp com os dados preenchidos — é só enviar a mensagem por lá.';
+            status.textContent = 'Não conseguimos enviar sua mensagem agora. Tente novamente ou fale com a gente pelo WhatsApp.';
           }
         })
         .finally(function () {
           if (submitBtn) submitBtn.disabled = false;
         });
-
-      form.reset();
     });
   });
 

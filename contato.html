@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato | SOMA Administradora e Gestão Contábil</title>
+<meta name="description" content="Fale com a SOMA Administradora e Gestão Contábil. Atendimento por telefone, e-mail e WhatsApp para condomínios e empresas da região metropolitana.">
+<link rel="icon" type="image/png" href="assets/img/logo-vinho.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-vinho.png" alt="SOMA Administradora">
+      <span class="brand-name">SOMA<small>Administradora &amp; Gestão Contábil</small></span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="solicitar-proposta.html">Solicitar Proposta</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+        <li><a href="boletos.html">Pagamento de Boletos</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-gradiente.png" alt="SOMA Administradora">
+      <span class="brand-name">SOMA<small>Administradora &amp; Gestão Contábil</small></span>
+    </a>
+    <button class="mobile-nav-close" aria-label="Fechar menu">
+      <i data-lucide="x"></i>
+    </button>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="quem-somos.html">Quem Somos</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="solicitar-proposta.html">Solicitar Proposta</a></li>
+      <li><a href="contato.html" aria-current="page">Contato</a></li>
+      <li><a href="boletos.html">Pagamento de Boletos</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-cta">
+    <a href="#" class="btn btn-primary" data-whatsapp="Olá! Vim pelo site da SOMA e gostaria de mais informações.">Falar no WhatsApp</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Início</a> / Contato</div>
+      <span class="eyebrow">Contato</span>
+      <h1>Fale diretamente com a equipe SOMA.</h1>
+      <p>Dúvidas, orçamentos ou suporte: escolha o canal que preferir. Estamos à disposição para atender condomínios e empresas da região metropolitana.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="form-wrap">
+        <div class="form-aside" data-reveal>
+          <span class="eyebrow">Canais de atendimento</span>
+          <h2>Estamos por perto.</h2>
+          <p>Prefere conversar direto? Ligue, envie um e-mail ou fale agora mesmo pelo WhatsApp.</p>
+          <ul class="contact-list">
+            <li>
+              <i data-lucide="phone"></i>
+              <div><strong>Telefone</strong>(81) 3000-0000</div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M7 17l-3 1 1-3a7 7 0 1 1 2 2z"/><path d="M9 10c0 2.5 2 4.5 4.5 4.5"/></svg>
+              <div><strong>WhatsApp</strong>(81) 90000-0000</div>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <div><strong>E-mail</strong>contato@somaadministradora.com.br</div>
+            </li>
+            <li>
+              <i data-lucide="map-pin"></i>
+              <div><strong>Atuação</strong>Recife e Região Metropolitana — PE</div>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <div><strong>Horário</strong>Segunda a sexta, 8h às 18h</div>
+            </li>
+          </ul>
+          <div class="photo-frame photo-frame--tall">
+            <img src="assets/img/foto-placeholder.avif" alt="Espaço reservado para foto do escritório SOMA">
+            <span class="photo-tag"><i data-lucide="camera"></i> Foto do escritório (substituir)</span>
+          </div>
+        </div>
+
+        <form data-lead-form data-lead-title="Contato — Site SOMA" data-reveal>
+          <div class="field-row">
+            <div class="field">
+              <label for="c-nome">Nome completo</label>
+              <input type="text" id="c-nome" name="Nome" required placeholder="Seu nome">
+            </div>
+            <div class="field">
+              <label for="c-telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="c-telefone" name="Telefone" required placeholder="(00) 00000-0000">
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-email">E-mail</label>
+            <input type="email" id="c-email" name="E-mail" placeholder="seuemail@exemplo.com">
+          </div>
+          <div class="field">
+            <label for="c-assunto">Assunto</label>
+            <select id="c-assunto" name="Assunto">
+              <option value="">Selecione uma opção</option>
+              <option>Gestão de Condomínios</option>
+              <option>Sindicância Profissional</option>
+              <option>Contabilidade</option>
+              <option>Departamento Fiscal</option>
+              <option>Departamento Pessoal</option>
+              <option>Pagamento de Boletos</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-mensagem">Mensagem</label>
+            <textarea id="c-mensagem" name="Mensagem" placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            <span class="form-status"></span>
+          </div>
+          <p class="form-note">Ao enviar, você será direcionado ao WhatsApp da SOMA com a mensagem já preenchida.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="assets/img/logo-gradiente.png" alt="SOMA" style="height:44px;">
+          <span class="brand-name">SOMA<small>Administradora &amp; Gestão Contábil</small></span>
+        </a>
+        <p>Administração de condomínios, sindicância e gestão contábil para empresas e condomínios da região metropolitana, desde 2015.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="solicitar-proposta.html">Solicitar Proposta</a></li>
+          <li><a href="boletos.html">Pagamento de Boletos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="servicos.html#condominios">Gestão de Condomínios</a></li>
+          <li><a href="servicos.html#contabilidade">Contabilidade</a></li>
+          <li><a href="servicos.html#fiscal">Departamento Fiscal</a></li>
+          <li><a href="servicos.html#pessoal">Departamento Pessoal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li>(81) 3000-0000</li>
+          <li>contato@somaadministradora.com.br</li>
+          <li>Recife e Região Metropolitana — PE</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> SOMA Administradora e Gestão Contábil. Todos os direitos reservados.</span>
+      <span>Desde 2015 ao lado de condomínios e empresas.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whats-float" href="#" data-whatsapp="Olá! Vim pelo site da SOMA e gostaria de falar com a equipe.">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 17l-3 1 1-3a7 7 0 1 1 2 2z"/><path d="M9 10c0 2.5 2 4.5 4.5 4.5"/></svg>
+  <span class="whats-label">Fale no WhatsApp</span>
+</a>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

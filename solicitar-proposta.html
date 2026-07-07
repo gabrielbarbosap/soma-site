@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitar Proposta | SOMA Administradora e Gestão Contábil</title>
+<meta name="description" content="Solicite uma proposta para administração do seu condomínio ou gestão contábil da sua empresa. Retorno rápido pelo WhatsApp.">
+<link rel="icon" type="image/png" href="assets/img/logo-vinho.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-vinho.png" alt="SOMA Administradora">
+      <span class="brand-name">SOMA<small>Administradora &amp; Gestão Contábil</small></span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="solicitar-proposta.html" aria-current="page">Solicitar Proposta</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="boletos.html">Pagamento de Boletos</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-gradiente.png" alt="SOMA Administradora">
+      <span class="brand-name">SOMA<small>Administradora &amp; Gestão Contábil</small></span>
+    </a>
+    <button class="mobile-nav-close" aria-label="Fechar menu">
+      <i data-lucide="x"></i>
+    </button>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="quem-somos.html">Quem Somos</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="solicitar-proposta.html" aria-current="page">Solicitar Proposta</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="boletos.html">Pagamento de Boletos</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-cta">
+    <a href="#" class="btn btn-primary" data-whatsapp="Olá! Vim pelo site da SOMA e gostaria de mais informações.">Falar no WhatsApp</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Início</a> / Solicitar Proposta</div>
+      <span class="eyebrow">Solicitar Proposta</span>
+      <h1>Vamos entender a necessidade do seu condomínio ou empresa.</h1>
+      <p>Preencha os dados abaixo. Ao enviar, o WhatsApp abre automaticamente com as informações prontas para você concluir o contato com nossa equipe.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="form-wrap">
+        <div class="form-aside" data-reveal>
+          <span class="eyebrow">Como funciona</span>
+          <h2>Sem burocracia para começar.</h2>
+          <p>Conte um pouco sobre o seu condomínio ou empresa e o tipo de serviço que procura. Nossa equipe analisa as informações e retorna com uma proposta sob medida.</p>
+          <ul class="contact-list">
+            <li>
+              <i data-lucide="phone"></i>
+              <div><strong>Telefone</strong>(81) 3000-0000</div>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <div><strong>E-mail</strong>contato@somaadministradora.com.br</div>
+            </li>
+            <li>
+              <i data-lucide="map-pin"></i>
+              <div><strong>Área de atuação</strong>Região Metropolitana e áreas afins</div>
+            </li>
+          </ul>
+          <div class="photo-frame photo-frame--tall">
+            <img src="assets/img/foto-placeholder.avif" alt="Espaço reservado para foto da equipe SOMA">
+            <span class="photo-tag"><i data-lucide="camera"></i> Foto (substituir)</span>
+          </div>
+        </div>
+
+        <form data-lead-form data-lead-title="Solicitação de Proposta — Site SOMA" data-reveal>
+          <div class="field-row">
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="Nome" required placeholder="Seu nome">
+            </div>
+            <div class="field">
+              <label for="empresa">Empresa / Condomínio</label>
+              <input type="text" id="empresa" name="Empresa ou Condomínio" required placeholder="Nome da empresa ou condomínio">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="Telefone" required placeholder="(00) 00000-0000">
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="E-mail" placeholder="seuemail@exemplo.com">
+            </div>
+          </div>
+          <div class="field">
+            <label for="servico">Tipo de serviço</label>
+            <select id="servico" name="Serviço de interesse" required>
+              <option value="">Selecione uma opção</option>
+              <option>Gestão de Condomínios</option>
+              <option>Sindicância Profissional</option>
+              <option>Contabilidade</option>
+              <option>Departamento Fiscal</option>
+              <option>Departamento Pessoal</option>
+              <option>Mais de um serviço</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="Mensagem" placeholder="Conte um pouco sobre a necessidade do seu condomínio ou empresa"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Enviar Solicitação</button>
+            <span class="form-status"></span>
+          </div>
+          <p class="form-note">Ao enviar, você será direcionado ao WhatsApp da SOMA com a mensagem já preenchida.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="assets/img/logo-gradiente.png" alt="SOMA" style="height:44px;">
+          <span class="brand-name">SOMA<small>Administradora &amp; Gestão Contábil</small></span>
+        </a>
+        <p>Administração de condomínios, sindicância e gestão contábil para empresas e condomínios da região metropolitana, desde 2015.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="solicitar-proposta.html">Solicitar Proposta</a></li>
+          <li><a href="boletos.html">Pagamento de Boletos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="servicos.html#condominios">Gestão de Condomínios</a></li>
+          <li><a href="servicos.html#contabilidade">Contabilidade</a></li>
+          <li><a href="servicos.html#fiscal">Departamento Fiscal</a></li>
+          <li><a href="servicos.html#pessoal">Departamento Pessoal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li>(81) 3000-0000</li>
+          <li>contato@somaadministradora.com.br</li>
+          <li>Recife e Região Metropolitana — PE</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> SOMA Administradora e Gestão Contábil. Todos os direitos reservados.</span>
+      <span>Desde 2015 ao lado de condomínios e empresas.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whats-float" href="#" data-whatsapp="Olá! Vim pelo site da SOMA e gostaria de solicitar uma proposta.">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 17l-3 1 1-3a7 7 0 1 1 2 2z"/><path d="M9 10c0 2.5 2 4.5 4.5 4.5"/></svg>
+  <span class="whats-label">Fale no WhatsApp</span>
+</a>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

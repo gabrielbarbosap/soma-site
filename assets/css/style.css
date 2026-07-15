@@ -163,7 +163,7 @@ p{ margin: 0 0 1.1em; color: var(--ink-soft); }
   padding-block: .7rem;
 }
 .brand{ display: flex; align-items: center; gap: .7rem; min-width: 0; }
-.brand img{ height: 48px; width: auto; flex-shrink: 0; }
+.brand img{ height: 56px; width: auto; flex-shrink: 0; }
 .brand-name{
   font-family: var(--font-display);
   font-size: 1.22rem;
@@ -184,7 +184,7 @@ p{ margin: 0 0 1.1em; color: var(--ink-soft); }
   white-space: normal;
 }
 @media (min-width: 400px){
-  .brand img{ height: 56px; }
+  .brand img{ height: 66px; }
   .brand-name{ font-size: 1.36rem; letter-spacing: .08em; }
   .brand-name small{ font-size: .66rem; letter-spacing: .16em; }
 }

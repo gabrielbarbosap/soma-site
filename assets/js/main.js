@@ -8,7 +8,7 @@
   }
 
   // ---------- Config de contato (ajustar com dados reais do cliente) ----------
-  var WHATSAPP_NUMBER = '5581987123221'; // formato: 55 + DDD + número, sem símbolos
+  var WHATSAPP_NUMBER = '5581985833635'; // formato: 55 + DDD + número, sem símbolos
 
   // ---------- Menu mobile ----------
   var toggle = document.querySelector('.nav-toggle');

@@ -163,10 +163,10 @@ p{ margin: 0 0 1.1em; color: var(--ink-soft); }
   padding-block: .7rem;
 }
 .brand{ display: flex; align-items: center; gap: .7rem; min-width: 0; }
-.brand img{ height: 56px; width: auto; flex-shrink: 0; }
+.brand img{ height: 60px; width: auto; flex-shrink: 0; }
 .brand-name{
   font-family: var(--font-display);
-  font-size: 1.22rem;
+  font-size: 1.3rem;
   letter-spacing: .06em;
   color: var(--navy);
   font-weight: 600;
@@ -175,7 +175,7 @@ p{ margin: 0 0 1.1em; color: var(--ink-soft); }
 .brand-name small{
   display: block;
   font-family: var(--font-body);
-  font-size: .6rem;
+  font-size: .64rem;
   letter-spacing: .13em;
   text-transform: uppercase;
   color: var(--wine);
@@ -184,9 +184,9 @@ p{ margin: 0 0 1.1em; color: var(--ink-soft); }
   white-space: normal;
 }
 @media (min-width: 400px){
-  .brand img{ height: 66px; }
-  .brand-name{ font-size: 1.36rem; letter-spacing: .08em; }
-  .brand-name small{ font-size: .66rem; letter-spacing: .16em; }
+  .brand img{ height: 72px; }
+  .brand-name{ font-size: 1.46rem; letter-spacing: .08em; }
+  .brand-name small{ font-size: .7rem; letter-spacing: .16em; }
 }
 
 .main-nav ul{ display: none; }
@@ -468,6 +468,11 @@ body.nav-open .mobile-nav{ transform: translateY(0); }
   gap: .9rem;
   margin-top: 2rem;
 }
+.hero-actions .btn-outline{
+  border-color: rgba(73,16,35,.35);
+  color: var(--wine);
+}
+.hero-actions .btn-outline:hover{ background: var(--wine); color: var(--rose-light); border-color: var(--wine); }
 .hero-stats{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
